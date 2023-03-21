@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // Obtener datos enviados por el formulario
         String nombre = request.getParameter("nombre");
         String apellidoP = request.getParameter("apellidoP");
         String sexo = request.getParameter("sexo");
@@ -23,9 +24,11 @@ public class Servlet extends HttpServlet {
         String musica = request.getParameter("musica");
         String comentarios = request.getParameter("comentarios");                
         
+        // Tipo de respuesta
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
         
+        // Formato de respuesta
         PrintWriter out = response.getWriter();        
         out.print("<html>");
         out.print("<head>");
