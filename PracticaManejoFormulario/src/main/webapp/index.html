@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">    
+        <title>Formulario</title>        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+
+    <body>
+
+        <form action="/PracticaManejoFormulario/Formulario" method="post">
+
+            <div class="datos">
+                <div class="izq">
+                    <div class="dato">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="dato">
+                        <label for="apellidoP">Apellido Paterno</label>
+                        <input type="text" name="apellidoP" id="apellidoP">
+                    </div>
+                    <div class="dato">
+                        <label for="">Sexo</label>
+                        <div class="checks">
+                            <div class="checkRadio">
+                                <input type="radio" name="sexo" id="masculino" value="Masculino">
+                                <label for="masculino">Masculino</label>
+                            </div>
+                            <div class="checkRadio">
+                                <input type="radio" name="sexo" id="femenino" value="Femenino">
+                                <label for="femenino">Femenino</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dato">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo">
+                    </div>
+                    <div class="dato">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono">
+                    </div>
+                    <div class="dato">
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                    </div>
+                    <div class="dato">
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <input type="txt" name="nacionalidad" id="nacionalidad">
+                    </div>
+                </div>
+
+                <div class="der">
+                    <div class="dato">
+                        <label for="">Tecnologia(s) de interes</label>
+                        <div class="checks">
+                            <div class="check">
+                                <input type="checkbox" name="tecnologia" id="java" value="Java">
+                                <label for="java">Java</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="tecnologia" id="net" value=".Net">
+                                <label for="net">.Net</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" name="tecnologia" id="pyton" value="Pyton">
+                                <label for="pyton">Pyton</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dato">
+                        <label for="">Ocupación actual</label>
+                        <select name="ocupacion" id="ocupacion">
+                            <option value="">- - - - - - - - -</option>
+                            <option value="Desarrollador Frontend">Desarrollador Frontend</option>
+                            <option value="Desarrollador Backend">Desarrollador Backend</option>
+                            <option value="Desarrollador Fullstack">Desarrollador Fullstack</option>
+                            <option value="Soporte técnico">Soporte técnico</option>
+                            <option value="Redes">Redes</option>
+                        </select>
+                    </div>
+                    <div class="dato">
+                        <label for="">Musica favorita</label>
+                        <select name="musica" id="musica">
+                            <option value="">- - - - - - - - -</option>
+                            <option value="Ska">Ska</option>
+                            <option value="Electronica">Electronica</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Salsa">Salsa</option>
+                            <option value="Cumbia">Cumbia</option>
+                        </select>
+                    </div>
+                    <div class="dato">
+                        <label for="">Comentarios</label>
+                        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn">Registrar</button>
+
+        </form>
+
+    </body>
+
+</html>
