@@ -98,13 +98,25 @@ form .datos .dato .checks .checkRadio, .check {
     margin-right: 10px;
 }
 
+form .botones {
+    display: flex;
+}
+
 form .btn {
     width: 150px;
-    margin-top: 30px;
+    margin: 30px 10px 0 10px;
     padding: 10px 0;
-    font-weight: bold;    
-    background-color: rgb(69, 69, 206);
+    font-weight: bold;        
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    color: #fff;
+}
+
+form .registrar {
+    background-color: rgb(39, 84, 39);    
+}
+
+form .limpiar {
+    background-color: rgb(68, 67, 67);
 }

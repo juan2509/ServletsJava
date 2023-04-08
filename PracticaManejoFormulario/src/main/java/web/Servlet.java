@@ -12,6 +12,7 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Obtener datos enviados por el formulario
+        String datoOculto = request.getParameter("oculto");
         String nombre = request.getParameter("nombre");
         String apellidoP = request.getParameter("apellidoP");
         String sexo = request.getParameter("sexo");
@@ -37,6 +38,7 @@ public class Servlet extends HttpServlet {
         out.print("<body>");
         out.print("<h2>Respuesta de la petición realizada por el formulario</h2>");
         out.print("<br><br>");
+        out.print("<p>Valor oculto: " + datoOculto + "</p>");
         out.print("<p>Nombre: " + nombre  + " " + apellidoP + "</p>");
         out.print("<p>Género: " + sexo + "</p>");
         out.print("<p>Correo: " + correo + "</p>");

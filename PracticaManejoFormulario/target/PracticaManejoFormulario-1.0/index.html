@@ -9,25 +9,27 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="recursos/estilos.css">
+        <script type="text/javascript" src="recursos/funciones.js" /></script>
     </head>
 
     <body>
 
-        <form action="/PracticaManejoFormulario/Formulario" method="post">
-
+        <form name="form1" action="/PracticaManejoFormulario/Formulario" method="post" onsubmit="return validarForm(this)">
+            <input type="hidden" name="oculto" value="Valor oculto">
+            
             <div class="datos">
                 <div class="izq">
                     <div class="dato">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" name="nombre" id="nombre" onfocus="this.select()">
                     </div>
                     <div class="dato">
-                        <label for="apellidoP">Apellido Paterno</label>
-                        <input type="text" name="apellidoP" id="apellidoP">
+                        <label for="apellidoP">Apellido Paterno *</label>
+                        <input type="text" name="apellidoP" id="apellidoP" onfocus="this.select()">
                     </div>
                     <div class="dato">
-                        <label for="">Sexo</label>
+                        <label>Sexo *</label>
                         <div class="checks">
                             <div class="checkRadio">
                                 <input type="radio" name="sexo" id="masculino" value="Masculino">
@@ -40,26 +42,26 @@
                         </div>
                     </div>
                     <div class="dato">
-                        <label for="correo">Correo</label>
-                        <input type="email" name="correo" id="correo">
+                        <label for="correo">Correo *</label>
+                        <input type="email" name="correo" id="correo" onfocus="this.select()">
                     </div>
                     <div class="dato">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" name="telefono" id="telefono">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" name="telefono" id="telefono" onfocus="this.select()">
                     </div>
                     <div class="dato">
-                        <label for="fechaNacimiento">Fecha de nacimiento</label>
-                        <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                        <label for="fechaNacimiento">Fecha de nacimiento *</label>
+                        <input type="date" name="fechaNacimiento" id="fechaNacimiento" onfocus="this.select()">
                     </div>
                     <div class="dato">
-                        <label for="nacionalidad">Nacionalidad</label>
-                        <input type="txt" name="nacionalidad" id="nacionalidad">
+                        <label for="nacionalidad">Nacionalidad *</label>
+                        <input type="text" name="nacionalidad" id="nacionalidad" onfocus="this.select()">
                     </div>
                 </div>
 
                 <div class="der">
                     <div class="dato">
-                        <label for="">Tecnologia(s) de interes</label>
+                        <label>Tecnologia(s) de interes *</label>
                         <div class="checks">
                             <div class="check">
                                 <input type="checkbox" name="tecnologia" id="java" value="Java">
@@ -76,7 +78,7 @@
                         </div>
                     </div>
                     <div class="dato">
-                        <label for="">Ocupación actual</label>
+                        <label>Ocupación actual *</label>
                         <select name="ocupacion" id="ocupacion">
                             <option value="">- - - - - - - - -</option>
                             <option value="Desarrollador Frontend">Desarrollador Frontend</option>
@@ -87,8 +89,8 @@
                         </select>
                     </div>
                     <div class="dato">
-                        <label for="">Musica favorita</label>
-                        <select name="musica" id="musica">
+                        <label>Musica favorita</label>
+                        <select name="musica" multiple id="musica">
                             <option value="">- - - - - - - - -</option>
                             <option value="Ska">Ska</option>
                             <option value="Electronica">Electronica</option>
@@ -98,14 +100,17 @@
                         </select>
                     </div>
                     <div class="dato">
-                        <label for="">Comentarios</label>
-                        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                        <label for="comentarios">Comentarios *</label>
+                        <textarea name="comentarios" id="comentarios" cols="30" rows="10" onfocus="this.select()"></textarea>
                     </div>
                 </div>
 
             </div>
 
-            <button type="submit" class="btn">Registrar</button>
+            <div class="botones">
+                <button type="submit" class="btn registrar">Registrar</button>
+                <button type="reset" class="btn limpiar">Limpiar</button>
+            </div>
 
         </form>
 
